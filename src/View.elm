@@ -1,9 +1,8 @@
 module View exposing (..)
 import Model exposing (Model, Operation(..))
-import Html exposing (Html, div, text, span, main_)
+import Html exposing (Html, div, text, span, main_, b)
 import Html.Events exposing (onClick)
 import Html.Attributes exposing (class)
-import View.Header exposing (viewHeader)
 import Update exposing (Msg(..))
 
 view : Model -> Html Msg
@@ -29,7 +28,10 @@ view model =
     in
     
     div []
-        [    viewHeader
+        [    div [ class "header" ]
+                [  
+                    b [] [text "Simple Elm Calculator"]
+                ]
             , main_ [ class "container" ] [
                 div [ class "program"] [
                     div [ class "calculator__input"] [ 
