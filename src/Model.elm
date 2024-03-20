@@ -1,4 +1,5 @@
-module Model exposing (initModel, Model, Operation(..))
+module Model exposing (Model, Operation(..), initModel)
+
 
 type Operation
     = Add
@@ -6,6 +7,7 @@ type Operation
     | Multiply
     | Divide
     | None
+
 
 type alias Model =
     { result : Float
@@ -16,6 +18,7 @@ type alias Model =
     , errorMsg : String
     }
 
+
 initModel : Model
 initModel =
     { result = 0
@@ -25,4 +28,3 @@ initModel =
     , operation = None
     , errorMsg = ""
     }
-
